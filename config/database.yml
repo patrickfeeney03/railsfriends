@@ -22,8 +22,5 @@ test:
 
 production:
   adapter: postgresql
-  encoding: unicode
-  database: myapp_production
-  pool: 5
-  username: myapp
-  password:
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000

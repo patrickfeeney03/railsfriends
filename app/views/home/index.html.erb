@@ -1,2 +1,8 @@
-<h1>Hello World!</h1>
-This is my second Rails Webpage...
+<% if user_signed_in? %>
+  <% controller.redirect_to root_path %>
+<% else %>
+  <h1>Hello World!</h1>
+  This is my second Rails Webpage...
+<% end %>
+
+
